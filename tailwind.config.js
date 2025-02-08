@@ -59,6 +59,9 @@ export default {
       margin: {
         "1/6": "16.666667%",
       },
+      inset: {
+        "1/6": "16.666667%",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

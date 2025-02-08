@@ -1,3 +1,4 @@
+import Image from "@/assets/image.png";
 import { Clock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
@@ -17,7 +18,7 @@ export function ActivityCard({
     <Card className={cn("overflow-hidden", variant.background, className)}>
       <div className="relative aspect-[4/3] w-full">
         <img
-          src={imageSrc || "https://placehold.jp/64/c0c0c0/ffffff/800x600.png"}
+          src={imageSrc || Image}
           alt={imageAlt || title}
           className="object-cover"
         />

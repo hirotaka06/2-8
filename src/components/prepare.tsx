@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "@/assets/image.png";
 
 export default function MarblingInstructions() {
   const materials = [
@@ -75,7 +76,7 @@ export default function MarblingInstructions() {
             </div>
             <div className="relative aspect-[4/3]">
               <img
-                src="https://placehold.jp/64/c0c0c0/ffffff/800x600.png"
+                src={Image}
                 alt="マーブリング用具の配置図"
                 className="object-cover rounded-lg"
               />
