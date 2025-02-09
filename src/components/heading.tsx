@@ -1,14 +1,37 @@
-function Heading({ text }: { text: string }) {
+import { tv } from "tailwind-variants";
+
+const styles = {
+  container: tv({
+    base: "flex items-center w-full py-1",
+  }),
+  heading: tv({
+    base: "mr-3 pt-2 pb-2 font-bold text-primary-blue",
+    variants: {
+      type: {
+        normal: "text-2xl",
+        sub   : "ml-4 text-xl",
+      },
+    },
+  }),
+  line: tv({
+    base: "flex-grow h-1 bg-primary-blue",
+    variants: {
+      type: {
+        normal: "",
+        sub   : "hidden",
+      },
+    },
+  }),
+};
+
+export default function Heading({text, type = "normal",
+}: {
+  text: string; type?: "normal" | "sub";
+}){
   return (
-    <div className="flex items-center w-full py-1">
-      {/* テキストのスタイルを設定します */}
-      <h5 className="mr-3 pt-2 pb-2 font-bold text-[#22B2DA] text-2xl">
-        {text}
-      </h5>
-      {/* 水平線を引くためのボックスを設定します */}
-      <div className="flex-grow h-1 bg-[#22B2DA]" />
+    <div className={styles.container()}>
+      <h5 className={styles.heading({type})}>{text}</h5>
+      <div className={styles.line({type})} />
     </div>
   );
 }
-
-export default Heading;

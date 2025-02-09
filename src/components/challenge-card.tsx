@@ -4,8 +4,9 @@ import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
-import type { ActivityCardProps } from "@/types/activity";
-export function ActivityCard({
+import type { ChallengeCardProps } from "@/types/type";
+
+export default function ChallengeCard({
   title,
   imageSrc,
   imageAlt,
@@ -13,7 +14,7 @@ export function ActivityCard({
   duration,
   variant,
   className,
-}: ActivityCardProps) {
+}: ChallengeCardProps) {
   return (
     <Card className={cn("overflow-hidden", variant.background, className)}>
       <div className="relative aspect-[4/3] w-full">

@@ -1,6 +1,34 @@
-import { ChallengeType } from "../types/activity";
+import { ChallengeType } from "@/types/type";
+import { tv } from "tailwind-variants";
 
-// challengeデータ
+const styles = {
+  container: tv({
+    base: "space-y-2 py-1 text-gray-800",
+  }),
+  title: tv({
+    base: "text-xl font-bold",
+  }),
+  text: tv({
+    base: "text-base",
+  }),
+};
+
+export default function TextMap() {
+  return (
+    <div className={styles.container()}>
+      {challenge.intro.map((i) => (
+        <div key={i.title}>
+          <h6 className={styles.title()}>{i.title}</h6>
+          {i.texts.map((text, index) => (
+            <p key={index} className={styles.text()}>{text}</p>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// チャレンジデータ仮
 const challenge: ChallengeType = {
   intro: [
     {
@@ -24,25 +52,3 @@ const challenge: ChallengeType = {
     },
   ],
 };
-
-function TextMap() {
-  return (
-    // スタックの代わりにdivを使い、スペースを設定します
-    <div className="space-y-2 my-1 text-gray-800">
-      {challenge.intro.map((i) => (
-        <div key={i.title}>
-          {/* タイトルのスタイルを設定します */}
-          <h6 className="text-xl font-bold">{i.title}</h6>
-          {i.texts.map((text, index) => (
-            // テキストのスタイルを設定します
-            <p key={index} className="text-base">
-              {text}
-            </p>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default TextMap;

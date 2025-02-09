@@ -1,6 +1,6 @@
-import type { ActivityCardProps } from "@/types/activity";
+import type { ChallengeCardProps } from "@/types/type";
 
-export const activities: ActivityCardProps[] = [
+export const activities: ChallengeCardProps[] = [
   {
     title: "ボタン連打マシンを作ろう",
     imageSrc: "",

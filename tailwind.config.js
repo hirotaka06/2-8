@@ -50,6 +50,7 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+        "primary-blue": "#22B2DA",
       },
       borderWidth: {
         10: "10px",
