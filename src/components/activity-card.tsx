@@ -39,7 +39,7 @@ export function ActivityCard({
             <Badge
               key={tag.id}
               variant="secondary"
-              className="bg-yellow-300 hover:bg-yellow-400"
+              className="bg-yellow-300 hover:bg-yellow-400 text-gray-800"
             >
               #{tag.label}
             </Badge>

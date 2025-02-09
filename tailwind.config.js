@@ -62,6 +62,9 @@ export default {
       inset: {
         "1/6": "16.666667%",
       },
+      fontFamily: {
+        sans: ['"M PLUS Rounded 1c"', "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

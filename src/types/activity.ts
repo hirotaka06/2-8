@@ -18,3 +18,14 @@ export type ActivityCardProps = {
   };
   className?: string;
 };
+
+// 各チャレンジのテキスト情報を表す型
+export interface ChallengeText {
+  title: string;
+  texts: string[];
+}
+
+// チャレンジ全体を表す型
+export interface ChallengeType {
+  intro: ChallengeText[];
+}

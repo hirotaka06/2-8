@@ -47,7 +47,7 @@ export function Sidebar() {
         <NavItem icon={ClipboardList} japanese="課題" href="/play" />
         <NavItem icon={Flag} japanese="チャレンジ" href="/stay" />
         <NavItem icon={User} japanese="マイページ" href="/rent" />
-      </nav> */}
+      </nav>
 
       {/* News Section */}
       <div className="mt-auto p-4 space-y-4 text-gray-600">
