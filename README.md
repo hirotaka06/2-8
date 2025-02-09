@@ -1,3 +1,12 @@
+# Tailwind Variants 気持ち良すぎ
+Tailwind Variantsを使ってみようと思って使ったら気持ち良すぎて失神しかけたので今後も使いたい。
+大体のコンポーネントはTailwind Variantsになっている(なっていないものは作りかけ)。最終的にどこになんのスタイルが当たってるか分かりやすくていい気がした。
+あとは条件によって色を変える必要があるときの威力すごい
+
+# PNPM 気持ち良すぎ
+ndeのパッケージ管理はpnpmを使っています。今までnpmしか使ったことがなかったけれどpnpmを使ってみたらはやすぎて横転した。
+bunとかも今後は使ってみたい。どのくらい早くなるんだろう。。。
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
