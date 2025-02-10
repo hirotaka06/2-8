@@ -4,12 +4,13 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      fontFamily: {
+        sans: ['"M PLUS Rounded 1c"', "sans-serif"],
       },
       colors: {
+        "primary-blue": "#22B2DA",
+        "primary-cream": "#FDFBD4",
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -50,21 +51,11 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
-        "primary-blue": "#22B2DA",
       },
-      borderWidth: {
-        10: "10px",
-        12: "12px",
-        16: "16px",
-      },
-      margin: {
-        "1/6": "16.666667%",
-      },
-      inset: {
-        "1/6": "16.666667%",
-      },
-      fontFamily: {
-        sans: ['"M PLUS Rounded 1c"', "sans-serif"],
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
     },
   },

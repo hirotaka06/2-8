@@ -1,11 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "@/assets/image.png";
 
-function renderMaterialItem(item: { id: number; name: string; description?: string }) {
+function renderMaterialItem(item: {
+  id: number; name: string; description?: string
+}){
   return (
     <li key={item.id} className="flex space-x-3">
       <div>
-        <span className="flex items-center justify-center w-8 h-8 rounded-full bg-sky-600 text-white">
+        <span className="flex items-center justify-center
+                         w-8 h-8 rounded-full bg-sky-600 text-white">
           {item.id}
         </span>
       </div>
@@ -25,7 +28,8 @@ export default function Prepare() {
       <CardContent className="p-6">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-5">
-            <h2 className="pl-4 border-l-8 border-sky-600 text-2xl font-bold text-sky-600">
+            <h2 className="pl-4 border-l-8 border-sky-600
+                           text-2xl font-bold text-sky-600">
               用意するもの
             </h2>
             <ul className="space-y-3">{materials.map(renderMaterialItem)}</ul>

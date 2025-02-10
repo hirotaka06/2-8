@@ -46,9 +46,15 @@ interface DescriptionType {
 };
 
 export interface IntroType {
-  title: string,
-  texts: string[],
+  title: string;
+  texts: RubyTextType[];
 };
+
+// ルビ付きテキストを表現するための新しい型
+export interface RubyTextType {
+  text: string;
+  ruby: string;
+}
 
 interface PrepareType {
   materials: {

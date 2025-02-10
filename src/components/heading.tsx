@@ -2,13 +2,13 @@ import { tv } from "tailwind-variants";
 
 const styles = {
   container: tv({
-    base: "flex items-center w-full py-1",
+    base: "flex items-center w-full",
   }),
   heading: tv({
-    base: "mr-3 pt-2 pb-2 font-bold text-primary-blue",
+    base: "mr-3 font-bold text-primary-blue",
     variants: {
       type: {
-        normal: "text-2xl",
+        normal: "py-2 text-2xl",
         sub   : "ml-4 text-xl",
       },
     },

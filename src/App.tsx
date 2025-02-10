@@ -4,45 +4,46 @@ import Prepare from "@/components/prepare";
 import ChallengeCard from "@/components/challenge-card";
 import Heading from "@/components/heading";
 import TextMap from "@/components/textmap";
-import ActivityHeader from "@/components/header";
+import ChallengeHeader from "@/components/header";
 import Column from "@/components/column";
 import "@fontsource/m-plus-rounded-1c/500.css";
 import "@fontsource/m-plus-rounded-1c/800.css";
 
 export default function App() {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-[#FDFBD4]">
-      <div>
-        <Sidebar />
-        <div className="mt-3 mb-3 mr-3 ml-[calc(1/6*100%+10px)] flex-grow flex justify-center items-center bg-white rounded-2xl">
-          <div>
-            <div className="mt-4 mr-8 ml-8">
-              <ActivityHeader />
-            </div>
-            <div className="fixed left-1/6 inset-0 border-10 border-[#FDFBD4] pointer-events-none z-50 p-6"></div>
-            <div className="w-auto p-4 grid grid-cols-2 md:grid-cols-3 gap-4 mx-auto">
-              {activities.map((activity, index) => (
-                <ChallengeCard key={index} {...activity} />
-              ))}
-            </div>
-            <div className="mr-8 ml-8">
-              <Prepare />
-              <Heading text="せつめい" type="sub" />
-              <TextMap />
-              <Heading text="用意するもの" />
-              <TextMap />
-              <Column icon="think" title="ちょっと待って！" content="〇〇バッチは持ってるかな？持っていないと次の街には行けないよ" />
-              <Heading text="作り方" />
-              <TextMap />
-              <Column icon="warning" title="ちょっと待って！" content="〇〇バッチは持ってるかな？持っていないと次の街には行けないよ" />
-              <Heading text="やったね！完成したよ！" />
-              <TextMap />
-              <Column icon="question" title="ちょっと待って！" content="〇〇バッチは持ってるかな？持っていないと次の街には行けないよ" />
-              <Heading text="やったね！完成したよ！" />
-              <TextMap />
-            </div>
-          </div>
-        </div>
+    <div className="min-h-screen bg-primary-cream p-2">
+      {/* <div className="block md:hidden"> 上bar </div> */}
+      <aside className="hidden md:block"><Sidebar /></aside>
+      <div className="md:ml-[calc(1/6*100%+4px)]">
+        <div className="fixed inset-0 border-8 border-primary-cream"></div>
+        <main className="min-h-screen bg-white rounded-2xl p-4">
+          <header className="mb-4"><ChallengeHeader /></header>
+          <section className="grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+            {activities.map((activity, index) => (
+              <ChallengeCard key={index} {...activity} />
+            ))}
+          </section>
+          <section className="mt-4"><Prepare /></section>
+          <section className="mt-4">
+            <Heading text="用意するもの" />
+            <TextMap />
+            <Column icon="think" title="ちょっと待って！"
+                    content="〇〇バッチは持ってるかな？持っていないと次の街には行けないよ" />
+          </section>
+          <section className="mt-4">
+            <Heading text="作り方" />
+            <TextMap />
+            <Column icon="warning" title="ちょっと待って！"
+                    content="〇〇バッチは持ってるかな？持っていないと次の街には行けないよ" />
+          </section>
+          <section className="mt-4">
+            <Heading text="やったね！完成したよ！" />
+            <Heading text="やってみてどうだった？" type="sub" />
+            <TextMap />
+            <Column icon="question" title="ちょっと待って！"
+                    content="〇〇バッチは持ってるかな？持っていないと次の街には行けないよ" />
+          </section>
+        </main>
       </div>
     </div>
   );

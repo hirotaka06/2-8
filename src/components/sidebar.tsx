@@ -5,7 +5,9 @@ import BackgroundWhite from "@/assets/background_white.svg";
 export default function Sidebar() {
   return (
     <aside
-      className="fixed top-0 left-0 h-full w-1/6 flex flex-col bg-yellow-300 text-white z-40 overflow-hidden"
+      className="fixed top-0 left-0 h-full w-[calc(1/6*100%)]
+                 flex flex-col bg-yellow-300
+               text-white z-40 overflow-hidden"
       style={{
         backgroundImage: `url(${BackgroundWhite})`,
         backgroundRepeat: "repeat",

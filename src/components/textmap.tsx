@@ -16,39 +16,84 @@ const styles = {
 export default function TextMap() {
   return (
     <div className={styles.container()}>
-      {challenge.intro.map((i) => (
+      {challengeWithRuby.intro.map((i) => (
         <div key={i.title}>
           <h6 className={styles.title()}>{i.title}</h6>
-          {i.texts.map((text, index) => (
-            <p key={index} className={styles.text()}>{text}</p>
-          ))}
+          <p className={styles.text()}>
+            {i.texts.map((textObj, index) => (
+              <ruby key={index}>
+                {textObj.text}
+                <rt>{textObj.ruby}</rt>
+              </ruby>
+            ))}
+          </p>
         </div>
       ))}
     </div>
   );
 }
 
-// チャレンジデータ仮
-const challenge: ChallengeType = {
+// ルビ付きのテキストデータ
+const challengeWithRuby: ChallengeType = {
   intro: [
     {
       title: "もくひょう",
       texts: [
-        "ぜんまいで泳ぐおもちゃを魔改造(まかいぞう)して、水中ではなく陸(りく)をすすませる",
-      ],
-    },
-    {
-      title: "考えよう",
-      texts: [
-        "陸(りく)を速くすすむ乗り物は、どうやってすすんでいるかな？",
-        "「タイヤ」をつかうといいかも？",
-      ],
-    },
-    {
-      title: "やってみてね",
-      texts: [
-        "このサイトのつくりかたいがいにも、すきな方法でうごかしてみてね！",
-      ],
+        { "text": "陸", "ruby": "りく" },
+        { "text": "を", "ruby": "" },
+        { "text": "速く", "ruby": "はやく" },
+        { "text": "すすむ", "ruby": "" },
+        { "text": "乗り物", "ruby": "のりもの" },
+        { "text": "は", "ruby": "" },
+        { "text": "、", "ruby": "" },
+        { "text": "どう", "ruby": "" },
+        { "text": "やって", "ruby": "" },
+        { "text": "すすんで", "ruby": "" },
+        { "text": "いる", "ruby": "" },
+        { "text": "かな", "ruby": "" },
+        { "text": "？", "ruby": "" }
+    ],
     },
   ],
 };
+
+
+// export default function TextMap() {
+//   return (
+//     <div className={styles.container()}>
+//       {challenge.intro.map((i) => (
+//         <div key={i.title}>
+//           <h6 className={styles.title()}>{i.title}</h6>
+//           {i.texts.map((text, index) => (
+//             <p key={index} className={styles.text()}>{text}</p>
+//           ))}
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
+
+// // チャレンジデータ仮
+// const challenge: ChallengeType = {
+//   intro: [
+//     {
+//       title: "もくひょう",
+//       texts: [
+//         "ぜんまいで泳ぐおもちゃを魔改造して、水中ではなく陸をすすませる",
+//       ],
+//     },
+//     {
+//       title: "考えよう",
+//       texts: [
+//         "陸(りく)を速くすすむ乗り物は、どうやってすすんでいるかな？",
+//         "「タイヤ」をつかうといいかも？",
+//       ],
+//     },
+//     {
+//       title: "やってみてね",
+//       texts: [
+//         "このサイトのつくりかたいがいにも、すきな方法でうごかしてみてね！",
+//       ],
+//     },
+//   ],
+// };
